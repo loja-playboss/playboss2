@@ -15,29 +15,11 @@
       overflow-x: hidden;
     }
 
-    header {
+    .slogan {
       text-align: center;
-      padding: 60px 20px 20px;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #FFD700; /* dourado */
-      margin: 0;
-      animation: fadeInDown 1s forwards;
-    }
-
-    header p {
+      margin-top: 320px; /* ajusta a posição da frase */
+      font-size: 1.5rem;
       color: #facc15;
-      font-size: 1.25rem;
-      margin-top: 1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      animation: fadeIn 1s 0.5s forwards;
-      opacity: 0;
     }
 
     .buttons {
@@ -45,8 +27,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 16px;
-      padding: 40px 20px;
-      background-color: rgba(0, 0, 0, 0.6);
+      padding: 60px 20px 0;
     }
 
     .btn {
@@ -75,9 +56,8 @@
       text-align: center;
       font-size: 0.875rem;
       color: #ccc;
-      margin: 40px 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
+      margin-top: 160px;
+      margin-bottom: 40px;
     }
 
     footer a {
@@ -88,26 +68,13 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    @keyframes fadeInDown {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>PLAYBOSS</h1>
-    <p>Chegou o estilo de quem comanda. Seja bem-vindo à <strong>PLAYBOSS</strong></p>
-  </header>
+
+  <div class="slogan">
+    Chegou a marca de quem comanda. Seja bem-vindo à <strong>PLAYBOSS</strong>
+  </div>
 
   <section class="buttons">
     <a href="https://www.facebook.com/profile.php?id=61576887928713" class="btn facebook" target="_blank">
