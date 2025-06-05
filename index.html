@@ -12,7 +12,7 @@
       background-size: cover;
       font-family: sans-serif;
       color: white;
-      overflow: hidden;
+      /* Removido: overflow: hidden; */
     }
 
     .slogan {
@@ -31,7 +31,7 @@
       top: 68%;
       left: 50%;
       transform: translate(-50%, -50%);
-      display: fixed;
+      display: flex; /* Corrigido aqui */
       justify-content: center;
       flex-wrap: wrap;
       gap: 8px;
@@ -132,7 +132,6 @@
   </section>
 
   <footer>
-    
     © <span id="year"></span> PLAYBOSS. Todos os direitos reservados.
   </footer>
 
