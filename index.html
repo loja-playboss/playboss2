@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLAYBOSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      background: url('playboss.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #FFD700; /* dourado */
+      margin: 0;
+      animation: fadeInDown 1s forwards;
+    }
+
+    header p {
+      color: #facc15;
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeIn 1s 0.5s forwards;
+      opacity: 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 16px;
+      color: white;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .facebook { background-color: #3b5998; }
+    .instagram { background: linear-gradient(to right, #ec4899, #f59e0b); }
+    .shopee { background-color: #f97316; }
+    .whatsapp { background-color: #22c55e; }
+
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #ccc;
+      margin: 40px 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+    }
+
+    footer a {
+      color: #4ade80;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PLAYBOSS</h1>
+    <p>Chegou o estilo de quem comanda. Seja bem-vindo à <strong>PLAYBOSS</strong></p>
+  </header>
+
+  <section class="buttons">
+    <a href="https://www.facebook.com/profile.php?id=61576887928713" class="btn facebook" target="_blank">
+      <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+    <a href="https://www.instagram.com/loja.playboss?igsh=bGZxY3hmbmNsMWtk&utm_source=qr" class="btn instagram" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.shopee.com.br/p6cld51nc4" class="btn shopee" target="_blank">
+      <i class="fab fa-shopify"></i> Shopee
+    </a>
+    <a href="https://wa.me/5522997373412" class="btn whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+  </section>
+
+  <footer>
+    <a href="https://wa.me/5522997373412" target="_blank">(22) 99737-3412</a><br />
+    © <span id="year"></span> PLAYBOSS. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
