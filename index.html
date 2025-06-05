@@ -2,41 +2,59 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PLAYBOSS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {
+    * {
       margin: 0;
-      background: url('playboss.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: sans-serif;
-      color: white;
-      overflow: hidden;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: sans-serif;
+      color: white;
+      background-color: black;
+    }
+
+    /* Fundo com imagem fixa */
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* Slogan fixo */
     .slogan {
       position: fixed;
-      top: 60px;
+      top: 14%;
       width: 100%;
       text-align: center;
       font-size: 1.6rem;
       color: #facc15;
       z-index: 10;
-      padding: 0 10px;
     }
 
+    /* Botões fixos */
     .buttons {
       position: fixed;
-      top: 55%;
+      top: 68%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 16px;
       z-index: 10;
-      padding: 0 20px;
     }
 
     .btn {
@@ -61,9 +79,10 @@
     .shopee { background-color: #f97316; }
     .whatsapp { background-color: #22c55e; }
 
+    /* Rodapé fixo */
     footer {
       position: fixed;
-      bottom: 30px;
+      bottom: 2%;
       width: 100%;
       text-align: center;
       font-size: 0.875rem;
@@ -79,43 +98,19 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .slogan {
-        top: 40px;
-        font-size: 1.2rem;
-        padding: 0 10px;
-      }
-
-      .buttons {
-        top: 60%;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-        font-size: 1rem;
-      }
-
-      footer {
-        bottom: 20px;
-        font-size: 0.8rem;
-        padding: 0 10px;
-      }
-    }
   </style>
 </head>
 <body>
 
+  <!-- Imagem de fundo -->
+  <img src="playboss.jpg" alt="Fundo Playboss" class="background-image" />
+
+  <!-- Frase fixa -->
   <div class="slogan">
-    Chegou a marca de quem comanda. Seja bem-vindo à <strong>PLAYBOSS</strong>
+    Chegou a marca de quem comanda...
   </div>
 
+  <!-- Botões fixos -->
   <section class="buttons">
     <a href="https://www.facebook.com/profile.php?id=61576887928713" class="btn facebook" target="_blank">
       <i class="fab fa-facebook-f"></i> Facebook
@@ -131,6 +126,7 @@
     </a>
   </section>
 
+  <!-- Rodapé fixo -->
   <footer>
     <a href="https://wa.me/5522997373412" target="_blank">(22) 99737-3412</a><br />
     © <span id="year"></span> PLAYBOSS. Todos os direitos reservados.
@@ -139,6 +135,5 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
