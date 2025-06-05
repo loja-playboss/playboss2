@@ -12,22 +12,29 @@
       background-size: cover;
       font-family: sans-serif;
       color: white;
-      overflow-x: hidden;
+      overflow: hidden; /* impede rolagem */
     }
 
     .slogan {
+      position: fixed;
+      top: 60px;
+      width: 100%;
       text-align: center;
-      margin-top: 260px; /* subiu um pouco */
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: #facc15;
+      z-index: 10;
     }
 
     .buttons {
+      position: fixed;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 16px;
-      margin-top: 240px; /* desceu mais */
+      z-index: 10;
     }
 
     .btn {
@@ -53,51 +60,8 @@
     .whatsapp { background-color: #22c55e; }
 
     footer {
+      position: fixed;
+      bottom: 30px;
+      width: 100%;
       text-align: center;
-      font-size: 0.875rem;
-      color: #ccc;
-      margin-top: 260px; /* desceu bastante */
-      margin-bottom: 40px;
-    }
-
-    footer a {
-      color: #4ade80;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="slogan">
-    Chegou a marca de quem comanda. Seja bem-vindo à <strong>PLAYBOSS</strong>
-  </div>
-
-  <section class="buttons">
-    <a href="https://www.facebook.com/profile.php?id=61576887928713" class="btn facebook" target="_blank">
-      <i class="fab fa-facebook-f"></i> Facebook
-    </a>
-    <a href="https://www.instagram.com/loja.playboss?igsh=bGZxY3hmbmNsMWtk&utm_source=qr" class="btn instagram" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a href="https://www.shopee.com.br/p6cld51nc4" class="btn shopee" target="_blank">
-      <i class="fab fa-shopify"></i> Shopee
-    </a>
-    <a href="https://wa.me/5522997373412" class="btn whatsapp" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-  </section>
-
-  <footer>
-    <a href="https://wa.me/5522997373412" target="_blank">(22) 99737-3412</a><br />
-    © <span id="year"></span> PLAYBOSS. Todos os direitos reservados.
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+      font-size: 0
